@@ -20,13 +20,13 @@ Usage
 
 * Create a virtualenv and `pip install -r requirements.pip` inside.
 * Copy `secret.py.example` to `secret.py`
-* Edit `secret.py` with a `clientID` and `secretID` from your github profile/auth page
-* Add your username and password (in clear) to `secret.py`
+* Edit `secret.py` with a `clientID` and `secretID` generated via [Github OAuth](https://github.com/settings/applications/new)
+* Add your username and password (in clear) to `secret.py`. You have to disable 2-factor authentication for this step to work (remember to re-enable!)
 * Launch `./auth.py` and export the `GITHUB_TOKEN` variable as suggested.
 * You can now clear/remove `secret.py`
-* Launch `step1_search_by_location.py`
-* Launch `step2_cleanup_users.py`
-* Launch `step3_extend_users.py`
+* Launch `step1_search_by_location.py` - Sends a query of different African locations to Github and stores the resulting user info. Takes a couple of minutes.
+* Launch `step2_cleanup_users.py` - Cleans up data about users discovers
+* Launch `step3_extend_users.py` - This step takes a long time (many hours) since it makes 1 request på user discovered!
 * Launch `step4_cleanup_dates.py`
 * Launch `step5_export_for_map.py`
 
